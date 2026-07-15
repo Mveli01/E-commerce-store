@@ -10,9 +10,9 @@ export default function showModal(product) {
             <h3>${product.name}</h3>
             <p>R ${(product.priceCents / 100).toFixed(2)}</p>
             <h4>${product.subCategory}</h4>
-            <p>Rating: ${product.rating.stars}</p>
+            <p><strong>Rating:</strong> ${product.rating.stars}</p>
             <p><strong>Description:</strong> ${product.description}</p>
-            <p>In Stock: ${product.rating.count} items</p>
+            <p><strong>In Stock:</strong> ${product.rating.count} items</p>
 
             <button id="add-to-cart" data-add="${product.id}">
                 Add to Cart

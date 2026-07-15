@@ -23,9 +23,12 @@ export function clickEvents(products, productContainer, searchInput){
     if (e.target.dataset.add) {
         const clickedProductId = products.find(product => String(product.id) === e.target.dataset.add);
         addToCart(clickedProductId);
-    } if (e.target.dataset.remove) {
-        removeFromCart(e.target.dataset.remove);
+    } const removeBtn = e.target.closest('[data-remove]');
+
+        if (removeBtn) {
+            removeFromCart(removeBtn.dataset.remove);
     }
+    
     
     }); 
         

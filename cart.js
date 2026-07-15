@@ -111,15 +111,9 @@ export function showCartProducts() {
                     ${product.quantity}
                 </p>
 
-                <p>
-                    Subtotal:
-                    R ${((product.priceCents * product.quantity) / 100).toFixed(2)}
-                </p>
-
-                <button
-                    data-remove="${product.id}">
+                <button data-remove="${product.id}" class="remove-btn">
                     <span class="fas fa-trash"></span>
-                    Remove
+                
                 </button>
 
             </div>
@@ -134,11 +128,6 @@ export function showCartProducts() {
         <hr>
 
         <div class="cart-summary">
-
-            <h3>
-                Total Items:
-                ${getCartCount()}
-            </h3>
 
             <h3>
                 Total:
