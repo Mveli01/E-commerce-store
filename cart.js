@@ -1,6 +1,7 @@
 const cartProducts = document.getElementById('cart-products');
 const cartCount = document.getElementById('cart-count');
 
+
 const cart = [];
 
 /*

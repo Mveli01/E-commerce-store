@@ -1,128 +1,218 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
     font-size: 20px;
 }
 
+/* =====================
+   HEADER
+===================== */
+
 #page-hearder{
-    position:fixed;
-    top:0;
-    left:0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:80px;
+    width: 100%;
+    height: 80px;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    padding:0 20px;
-    background:white;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
-    z-index:100;
+    padding: 0 20px;
+
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+
+    z-index: 100;
 }
 
 #search-container{
-    gap: 0px;
+    display: flex;
+    align-items: center;
 }
 
 #search-input{
     width: 300px;
     padding: 12px;
-    font-size:1rem;
+    font-size: 1rem;
 }
 
 #search-btn{
     padding: 12px 20px;
-    font-size:1rem;
-    cursor:pointer;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#product-container{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:30px;
+li{
+    cursor: pointer;
+}
 
-    padding:20px;
-    margin-top:100px;
+/* =====================
+   CART ICON
+===================== */
+
+#cart-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+#cart-count{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* =====================
+   CART SIDEBAR
+===================== */
+
+#cart-products-container{
+    position: fixed;
+
+    top: 80px;
+    right: -320px;
+
+    width: 320px;
+    height: calc(100vh - 80px);
+
+    padding: 20px;
+
+    background: white;
+
+    box-shadow: -2px 0 10px rgba(0,0,0,.2);
+
+    overflow-y: auto;
+
+    transition: right .3s ease;
+
+    z-index: 200;
+}
+
+#cart-products-container.open{
+    right: 0;
+}
+
+.cart-item{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-summary{
+    margin-top: 20px;
+}
+
+/* =====================
+   PRODUCTS
+===================== */
+
+#product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    padding: 20px;
+    margin-top: 100px;
 }
 
 .product-card{
-    text-align:center;
-    padding:20px;
+    text-align: center;
 
-    border:1px solid #ddd;
-    border-radius:10px;
+    padding: 20px;
 
-    background:white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    background: white;
 }
 
 .product-image{
-    width:150px;
-    height:150px;
-    object-fit:contain;
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
 }
 
-#modal-wrapper {
-    position: fixed;
-    inset: 0; /* top, right, bottom, left = 0 */
-    background: rgba(0, 0, 0, 0.4);
+/* =====================
+   MODAL
+===================== */
 
-    display: none; /* hidden by default */
+#modal-wrapper{
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.4);
+
+    display: none;
     justify-content: center;
     align-items: center;
 
-    z-index: 1000;
     backdrop-filter: blur(4px);
+
+    z-index: 1000;
 }
 
+#modal-container{
+    background: white;
 
-#modal-container {
-    background-color: #fff;
     width: 800px;
     max-width: 90%;
     max-height: 80vh;
 
-    border-radius: 8px;
     padding: 20px;
-    overflow-y: auto;
-    box-shadow: 0 5px 20px rgba(0,0,0,.3);
 
-    /* IMPORTANT: stop clicks from bubbling to overlay */
+    border-radius: 8px;
+
+    overflow-y: auto;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
 }
 
 .modal-content{
-    display:flex;
-    gap:30px;
-    align-items:flex-start;
+    display: flex;
+    gap: 30px;
+
+    align-items: flex-start;
 }
 
 .modal-image{
-    width:300px;
-    height:300px;
+    width: 300px;
+    height: 300px;
 
-    object-fit:contain;
-    flex-shrink:0;
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
+/* =====================
+   BUTTONS
+===================== */
+
 .remove-btn{
-    border:none;
-    background:none;
-    cursor:pointer;
-    font-size:1.2rem;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
 }
 
 .remove-btn:hover{
-    color:red;
+    color: red;
 }
-
-
-
-
