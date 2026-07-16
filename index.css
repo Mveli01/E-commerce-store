@@ -48,6 +48,10 @@ body{
     cursor: pointer;
 }
 
+select{
+    cursor: pointer;
+}
+
 ul{
     display: flex;
     gap: 20px;
