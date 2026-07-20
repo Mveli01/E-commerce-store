@@ -220,3 +220,32 @@ li{
 .remove-btn:hover{
     color: red;
 }
+
+/* =====================
+   ABOUT & CONTACT PAGES
+===================== */
+
+.page-content{
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-item i{
+    width: 30px;
+    font-size: 1.4rem;
+}
+
+.page-content a{
+    display: inline-block;
+    margin-top: 30px;
+}
