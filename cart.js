@@ -2,7 +2,7 @@ const cartProducts = document.getElementById('cart-products');
 const cartCount = document.getElementById('cart-count');
 
 
-const cart = [];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 /*
     Add Product
@@ -23,6 +23,10 @@ export function addToCart(product) {
     }
 
     updateCart();
+}
+
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 /*
@@ -149,8 +153,12 @@ export function showCartProducts() {
 */
 function updateCart() {
 
+    saveCart();
+
     cartCount.textContent = getCartCount();
 
     showCartProducts();
 
 }
+
+updateCart();
