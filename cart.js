@@ -139,7 +139,7 @@ export function showCartProducts() {
                 R ${(getCartTotal() / 100).toFixed(2)}
             </h3>
 
-            <button id="checkout-btn">
+            <button id="checkout-btn" data-checkout = "true">
                 Checkout
             </button>
 

@@ -1,6 +1,7 @@
 import searchProducts from './searchInput.js';
 import showModal, { closeModal } from './modal.js';
 import { addToCart, removeFromCart } from './cart.js';
+import pmntModal, {closePaymentModal} from './pmntModal.js';
 
 export function clickEvents(products, productContainer, searchInput) {
     const searchBtn = document.getElementById('search-btn');
@@ -39,6 +40,12 @@ export function clickEvents(products, productContainer, searchInput) {
         if (removeBtn) {
             removeFromCart(removeBtn.dataset.remove);
         }
+         if (e.target.dataset.checkout) {
+            pmntModal();
+        }
+        else if(e.target.dataset.close){
+            closePaymentModal();
+        }
     });
 
     cartWrapper.addEventListener('click', () => {
@@ -50,4 +57,11 @@ export function clickEvents(products, productContainer, searchInput) {
             closeModal();
         }
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closePaymentModal();
+        }
+
+    })    
 }
