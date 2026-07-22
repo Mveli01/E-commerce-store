@@ -1,6 +1,6 @@
 const pmntModalWrapper = document.getElementById('payment-modal-wrapper');
 const pmntModalContainer = document.getElementById('payment-modal-container');
-import { getCartTotal } from './cart.js';
+import { getCartTotal, clearCart, showCartProducts } from './cart.js';
 
 export default function pmntModal(){
     pmntModalContainer.innerHTML =  `<form class='payment-form' id='payment-form'>
@@ -25,10 +25,21 @@ export default function pmntModal(){
         </h3> 
 
         <button class='pay-btn' type='submit' data-pay='true'> Pay</button>
-        <button class='close-btn' type='close' data-close='true'> Close</button>
+        <button class='close-btn' type='button' data-close='true'> Close</button>
     </form>` 
 
     pmntModalWrapper.style.display = 'flex' 
+
+    const paymentForm = document.getElementById('payment-form');
+
+    paymentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    closePaymentModal();
+    clearCart();
+    
+    alert('Payment successful!');
+    
+});
 }
 
 export function closePaymentModal() {

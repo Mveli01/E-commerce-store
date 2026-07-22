@@ -161,4 +161,10 @@ function updateCart() {
 
 }
 
+export function clearCart() {
+    cart.length = 0;
+    updateCart();
+}
+
+
 updateCart();
