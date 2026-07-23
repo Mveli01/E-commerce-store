@@ -1,6 +1,7 @@
 const pmntModalWrapper = document.getElementById('payment-modal-wrapper');
 const pmntModalContainer = document.getElementById('payment-modal-container');
-import { getCartTotal, clearCart, showCartProducts } from './cart.js';
+const cartProducts = document.getElementById('cart-products');
+import { getCartTotal, clearCart } from './cart.js';
 
 export default function pmntModal(){
     pmntModalContainer.innerHTML =  `<form class='payment-form' id='payment-form'>
@@ -37,7 +38,12 @@ export default function pmntModal(){
     closePaymentModal();
     clearCart();
     
-    alert('Payment successful!');
+
+    cartProducts.innerHTML = `
+        <p class="success-message">
+            Payment successful!
+        </p>
+    `;
     
 });
 }
