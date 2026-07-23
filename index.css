@@ -5,6 +5,8 @@
 body{
     margin: 0;
     font-size: 20px;
+    background: #D5DEE8;
+    font-family: josefin sans, sans-serif;
 }
 
 /* =====================
@@ -25,7 +27,7 @@ body{
 
     padding: 0 20px;
 
-    background: white;
+    background: rgb(223, 226, 226);
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
 
     z-index: 100;
@@ -63,6 +65,8 @@ ul{
 li{
     cursor: pointer;
 }
+
+
 
 /* =====================
    CART ICON
@@ -143,7 +147,7 @@ li{
     border: 1px solid #ddd;
     border-radius: 10px;
 
-    background: white;
+    background: #ffffff;
 }
 
 .product-image{
@@ -208,9 +212,21 @@ li{
    BUTTONS
 ===================== */
 
+button{
+    background: #7C91B3;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background: #667EA5;
+    cursor: pointer;
+}
+
 .remove-btn{
     border: none;
     background: none;
+    color: black;
 
     cursor: pointer;
 
@@ -219,6 +235,7 @@ li{
 
 .remove-btn:hover{
     color: red;
+    border: none;
 }
 
 /* =====================
