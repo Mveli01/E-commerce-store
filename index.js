@@ -8,6 +8,10 @@ const searchInput = document.getElementById('search-input');
 
 let products = [];
 
+/*
+    Fetch Products function
+*/
+
 function getProducts() {
     fetch('https://kolzsticks.github.io/Free-Ecommerce-Products-Api/main/products.json')
         .then(res => res.json())
@@ -23,6 +27,9 @@ function getProducts() {
 
 getProducts();
 
+/*
+    Product Category Filter
+*/
 
 categorySelect.addEventListener('change', function () {
 
