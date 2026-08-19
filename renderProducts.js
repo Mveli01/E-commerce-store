@@ -1,4 +1,7 @@
 
+/*
+    Function to show all products on the page
+*/
 
 export default function renderProducts(products, productContainer){
     let html = ''
