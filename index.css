@@ -7,6 +7,9 @@ body{
     font-size: 20px;
     background: #D5DEE8;
     font-family: josefin sans, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* =====================
@@ -134,6 +137,7 @@ li{
 #product-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    flex: 1;
 
     gap: 30px;
 
