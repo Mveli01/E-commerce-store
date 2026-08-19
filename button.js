@@ -3,6 +3,10 @@ import showModal, { closeModal } from './modal.js';
 import { addToCart, removeFromCart } from './cart.js';
 import pmntModal, {closePaymentModal} from './pmntModal.js';
 
+/*
+    Button Click Events
+*/
+
 export function clickEvents(products, productContainer, searchInput) {
     const searchBtn = document.getElementById('search-btn');
     const cartWrapper = document.getElementById('cart-wrapper');
@@ -51,6 +55,10 @@ export function clickEvents(products, productContainer, searchInput) {
     cartWrapper.addEventListener('click', () => {
         cartContainer.classList.toggle('open');
     });
+
+/*
+    Keyboard Events
+*/
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
