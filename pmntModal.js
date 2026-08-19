@@ -35,6 +35,8 @@ export default function pmntModal(){
 
     pmntModalWrapper.style.display = 'flex' 
 
+    
+
     const paymentForm = document.getElementById('payment-form');
 
     paymentForm.addEventListener('submit', (e) => {
@@ -42,9 +44,10 @@ export default function pmntModal(){
     closePaymentModal();
     clearCart();
 
+/*
+    Payment successful message
+*/    
     
-    
-
     cartProducts.innerHTML = `
         <p class="success-message">
             Payment successful!
