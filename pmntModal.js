@@ -3,6 +3,10 @@ const pmntModalContainer = document.getElementById('payment-modal-container');
 const cartProducts = document.getElementById('cart-products');
 import { getCartTotal, clearCart } from './cart.js';
 
+/*
+    Payment Modal
+*/
+
 export default function pmntModal(){
     pmntModalContainer.innerHTML =  `<form class='payment-form' id='payment-form'>
         <h1 class='card-details'>Enter card details</h1>
@@ -37,6 +41,8 @@ export default function pmntModal(){
     e.preventDefault();
     closePaymentModal();
     clearCart();
+
+    
     
 
     cartProducts.innerHTML = `
