@@ -1,6 +1,10 @@
 const modalWrapper = document.getElementById('modal-wrapper');
 const modalContainer = document.getElementById('modal-container');
 
+/*
+    Product Modal function
+*/
+
 export default function showModal(product) {
     modalContainer.innerHTML = `
     <div class="modal-content">
